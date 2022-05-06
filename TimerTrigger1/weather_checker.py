@@ -32,7 +32,7 @@ def rain ()-> str:
         client = Client(account_sid, auth_token)
         message = client.messages \
             .create(
-            body="Bring an umbrella today, it's going to rain.🌧",
+            body="Bring an umbrella today, it's going to rain. 🌧",
             from_='+18312730625',
             to='+61431220867'
         )
