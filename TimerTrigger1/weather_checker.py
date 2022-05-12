@@ -1,8 +1,9 @@
 import requests
+import os
 from twilio.rest import Client
+from twilio.http.http_client import TwilioHttpClient
 
-
-def rain ()-> str:
+def rain()-> str:
     api_key = "f76aaa1d50a0166a5bf5b7693136611f"
     parameters = {
         "lat": -33.872761,
@@ -39,4 +40,3 @@ def rain ()-> str:
         return message.status
     else:
         return "No Rain"
-
