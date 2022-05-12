@@ -27,7 +27,6 @@ def rain ()-> str:
         if int(condition_code) < 700:
             will_rain = True
 
-   
     if will_rain:
         client = Client(account_sid, auth_token)
         message = client.messages \
