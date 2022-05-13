@@ -1,6 +1,6 @@
 import datetime
 import logging
-# from weather_checker import rain
+from weather_checker import rain
 
 import azure.functions as func
 
@@ -12,7 +12,7 @@ def main(mytimer: func.TimerRequest) -> None:
     if mytimer.past_due:
         logging.info('The timer is past due!')
 
-    # rain()
-    print("Hello World")
+    rain()
+
 
     logging.info('Python timer trigger function ran at %s', utc_timestamp)
