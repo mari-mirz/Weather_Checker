@@ -1,6 +1,6 @@
 import datetime
 import logging
-from weather_checker import rain
+from __main__ import rain
 
 import azure.functions as func
 
