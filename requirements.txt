@@ -4,5 +4,5 @@
 
 azure-functions
 requests
-weather_checker
+weather-checker
 twilio
