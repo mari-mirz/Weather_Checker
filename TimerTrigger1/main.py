@@ -2,7 +2,7 @@ import requests
 from twilio.rest import Client
 
 
-def rain ()-> str:
+def rain ():
     api_key = "f76aaa1d50a0166a5bf5b7693136611f"
     parameters = {
         "lat": -33.872761,
@@ -27,7 +27,6 @@ def rain ()-> str:
         if int(condition_code) < 700:
             will_rain = True
 
-   
     if will_rain:
         client = Client(account_sid, auth_token)
         message = client.messages \
