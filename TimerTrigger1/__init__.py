@@ -1,8 +1,8 @@
 import datetime
 import logging
-from main import rain
 
 import azure.functions as func
+from main import rain
 
 def main(mytimer: func.TimerRequest) -> None:
     utc_timestamp = datetime.datetime.utcnow().replace(
