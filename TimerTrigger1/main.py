@@ -3,7 +3,11 @@ import os
 from twilio.rest import Client
 from twilio.http.http_client import TwilioHttpClient
 
+<<<<<<< HEAD:TimerTrigger1/weather_checker.py
 def rain()-> str:
+=======
+def rain ():
+>>>>>>> 6eec79cd7bb8e8e3d9aa0c2e72840329bfb5a740:TimerTrigger1/main.py
     api_key = "f76aaa1d50a0166a5bf5b7693136611f"
     parameters = {
         "lat": -33.872761,
