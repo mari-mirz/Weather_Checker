@@ -4,9 +4,4 @@
 
 azure-functions
 requests
-<<<<<<< HEAD
-twilio-rest
-weather-checker
-=======
 twilio
->>>>>>> 6eec79cd7bb8e8e3d9aa0c2e72840329bfb5a740
