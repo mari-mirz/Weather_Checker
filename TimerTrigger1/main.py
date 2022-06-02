@@ -34,8 +34,10 @@ def rain ():
             from_='+18312730625',
             to='+61431220867'
         )
+    
+    print("code works")
 
-        return message.status
-    else:
-        return "No Rain"
+    #     return message.status
+    # else:
+    #     return "No Rain"
 
