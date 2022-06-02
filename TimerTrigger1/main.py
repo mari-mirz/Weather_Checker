@@ -39,13 +39,7 @@ def rain ():
     
     print("code works")
 
-<<<<<<< HEAD
     #     return message.status
     # else:
     #     return "No Rain"
 
-=======
-        return message.status
-    else:
-        return "No Rain"
->>>>>>> f653b2990deda0fdfc8c665e158a31a326909409
