@@ -3,10 +3,13 @@ import logging
 import azure.functions as func
 
 import requests
+import os
 from twilio.rest import Client
+from twilio.http.http_client import TwilioHttpClient
 
-def rain ():
-    api_key = ""
+
+def rain():
+    api_key = os.environ.get('WEATHERMAP_KEY')
     parameters = {
         "lat": -33.872761,
         "lon": 151.205338,
@@ -14,8 +17,8 @@ def rain ():
         "appid": api_key
     }
 
-    account_sid = ""
-    auth_token = ""
+    account_sid = os.environ.get('TWILIO_ACCOUNT_ID')
+    auth_token = os.environ.get('TWILIO_AUTH_TOKEN')
 
     response = requests.get("https://api.openweathermap.org/data/2.5/onecall", params=parameters)
     response.raise_for_status()
@@ -38,8 +41,12 @@ def rain ():
             from_='+18312730625',
             to='+61431220867'
         )
-    
+
     print("code works")
+
+    #     return message.status
+    # else:
+    #     return "No Rain"
 
 
 def main(mytimer: func.TimerRequest) -> None:
