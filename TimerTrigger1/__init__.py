@@ -6,7 +6,7 @@ import requests
 from twilio.rest import Client
 
 def rain ():
-    api_key = "f76aaa1d50a0166a5bf5b7693136611f"
+    api_key = ""
     parameters = {
         "lat": -33.872761,
         "lon": 151.205338,
@@ -14,8 +14,8 @@ def rain ():
         "appid": api_key
     }
 
-    account_sid = "ACbd18305fe11649d61fce28d4634f50ec"
-    auth_token = "c9be1e77d76a35ebb8c4ddfce7ebd380"
+    account_sid = ""
+    auth_token = ""
 
     response = requests.get("https://api.openweathermap.org/data/2.5/onecall", params=parameters)
     response.raise_for_status()
