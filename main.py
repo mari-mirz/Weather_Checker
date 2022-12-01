@@ -5,7 +5,7 @@ from twilio.http.http_client import TwilioHttpClient
 
 
 def rain():
-    api_key = "f76aaa1d50a0166a5bf5b7693136611f"
+    api_key = os.environ.get('WEATHERMAP_KEY')
     parameters = {
         "lat": -33.872761,
         "lon": 151.205338,
@@ -13,7 +13,7 @@ def rain():
         "appid": api_key
     }
 
-    account_sid = "ACbd18305fe11649d61fce28d4634f50ec"
+    account_sid = os.environ.get('TWILIO_ACCOUNT_ID')
     auth_token = os.environ.get('TWILIO_AUTH_TOKEN')
 
     response = requests.get("https://api.openweathermap.org/data/2.5/onecall", params=parameters)
