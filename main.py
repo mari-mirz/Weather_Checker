@@ -3,8 +3,14 @@ import os
 from twilio.rest import Client
 from twilio.http.http_client import TwilioHttpClient
 
+<<<<<<< HEAD:TimerTrigger1/main.py
 def rain ():
     api_key = ""
+=======
+
+def rain():
+    api_key = "f76aaa1d50a0166a5bf5b7693136611f"
+>>>>>>> e911e2f9ea015b002b779d1c78d8dfe360f948e9:main.py
     parameters = {
         "lat": -33.872761,
         "lon": 151.205338,
@@ -12,8 +18,13 @@ def rain ():
         "appid": api_key
     }
 
+<<<<<<< HEAD:TimerTrigger1/main.py
     account_sid = ""
     auth_token = ""
+=======
+    account_sid = "ACbd18305fe11649d61fce28d4634f50ec"
+    auth_token = os.environ.get('TWILIO_AUTH_TOKEN')
+>>>>>>> e911e2f9ea015b002b779d1c78d8dfe360f948e9:main.py
 
     response = requests.get("https://api.openweathermap.org/data/2.5/onecall", params=parameters)
     response.raise_for_status()
@@ -37,6 +48,8 @@ def rain ():
             to=''
         )
 
-        return message.status
-    else:
-        return "No Rain"
+    print("code works")
+
+    #     return message.status
+    # else:
+    #     return "No Rain"
